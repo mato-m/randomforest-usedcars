@@ -29,11 +29,11 @@ pickle.dump(model, open('finalized_model.sav', 'wb'))
 # Predikcija testnih vrijednosti
 Y_pred = model.predict(X_test)
 
-# Score - 0.8523800452567439
+# Score - 77.234%
 print("Score : "+str(model.score(X_test,Y_test)))
 
-# Mean squared error - 12440578.27469199
+# Mean squared error - 6184720.411
 print("Mean squared error : "+str(mean_squared_error(Y_test,Y_pred)))
 
-# Mean absolute error - 2425.455793045961
+# Mean absolute error - 1830.085
 print("Mean absolute error : "+str(mean_absolute_error(Y_test,Y_pred)))
