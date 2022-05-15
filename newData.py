@@ -4,6 +4,10 @@ from sklearn import preprocessing
 
 # Ucitavanje dataseta
 data = pandas.read_csv('cars.csv')
+data = data.loc[data['Price']<=30000]
+data = data.loc[data['Mileage']<=30000]
+data = data.loc[data['Year']>=2010]
+data.to_csv('cars.csv',index=False)
 
 # Uklanjanje nepotrebnih kolona
 data = data.drop(columns=['Make','Vin','State','City'])
